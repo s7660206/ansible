@@ -1,4 +1,5 @@
-hosts: all
+- hosts: all
+  tasks:
     - ec2_vpc:
         state: present
         cidr_block: 172.22.0.0/16
