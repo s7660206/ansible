@@ -1,6 +1,7 @@
-env: Prd
-profile: default
-region: ap-northeast-1
-vpc:
-  name: VPC
-  cidr_blodk: 10.0.0.0/16
+---
+- name: Playbook for staging
+  hosts: staging
+  become: yes
+  roles:
+    - { role: common, tags: common }
+    - { role: ruby, tags: ruby }
